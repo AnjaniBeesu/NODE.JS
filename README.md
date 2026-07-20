@@ -18,18 +18,3 @@ This repository contains organized notes covering HTML fundamentals, concepts, s
 * Semantic HTML
 * Multimedia
 * HTML5 Elements
-* Best Practices
-
-## Purpose
-
-* Store structured HTML notes
-* Track my learning progress
-* Revise concepts quickly
-* Build a strong foundation for CSS, JavaScript, and full-stack development
-
-## Future Additions
-
-* More detailed notes
-* Practice examples
-* Mini projects
-* Exercises and solutions
