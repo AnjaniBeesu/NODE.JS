@@ -27,17 +27,6 @@ This repository contains organized notes covering HTML fundamentals, concepts, s
 * Revise concepts quickly
 * Build a strong foundation for CSS, JavaScript, and full-stack development
 
-## Repository Structure
-
-```text
-HTML/
-├── README.md
-├── html-basics.md
-├── forms.md
-├── tables.md
-└── ...
-```
-
 ## Future Additions
 
 * More detailed notes
