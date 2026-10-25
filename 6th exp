@@ -1,0 +1,87 @@
+Experiment 6. Create an XML for the Book Store. Validate the Same Using Both DTD and XSD
+bookstore.xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bookstore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="bookstore.xsd">
+
+    <book>
+        <title>Let Us C</title>
+        <author>Yashavant Kanetkar</author>
+        <price>450.00</price>
+        <category>Programming</category>
+        <year>2023</year>
+    </book>
+
+    <book>
+        <title>Java: The Complete Reference</title>
+        <author>Herbert Schildt</author>
+        <price>850.00</price>
+        <category>Programming</category>
+        <year>2022</year>
+    </book>
+
+    <book>
+        <title>Database System Concepts</title>
+        <author>Abraham Silberschatz</author>
+        <price>750.00</price>
+        <category>Database</category>
+        <year>2021</year>
+    </book>
+
+    <book>
+        <title>Web Technologies</title>
+        <author>Uttam K. Roy</author>
+        <price>550.00</price>
+        <category>Web Development</category>
+        <year>2024</year>
+    </book>
+
+</bookstore>
+
+
+
+bookstore.dtd
+<!ELEMENT bookstore (book+)>
+
+<!ELEMENT book (title, author, price, category, year)>
+
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+
+Bookstore.xsd
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="bookstore">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="book" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <xs:element name="title" type="xs:string"/>
+
+                            <xs:element name="author" type="xs:string"/>
+
+                            <xs:element name="price" type="xs:decimal"/>
+
+                            <xs:element name="category" type="xs:string"/>
+
+                            <xs:element name="year" type="xs:integer"/>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
+
